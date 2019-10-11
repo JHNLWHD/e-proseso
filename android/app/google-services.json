@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "683727706316",
+    "firebase_url": "https://e-proseso.firebaseio.com",
+    "project_id": "e-proseso",
+    "storage_bucket": "e-proseso.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:683727706316:android:1b92284704b36a81bf4a69",
+        "android_client_info": {
+          "package_name": "zamboanga.digital.eproseso"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "683727706316-ljfh0mmde498t3hk4o7bq62n5fpf08n0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "zamboanga.digital.eproseso",
+            "certificate_hash": "ede48fae84d833c86aac972d47dba903afbcd409"
+          }
+        },
+        {
+          "client_id": "683727706316-dcmfe07nlh1mfos03c0rblmtrahg7qbf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPYJvl_jRbZ9ZIgfp9p56kTef4_Ypf4Yk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "683727706316-dcmfe07nlh1mfos03c0rblmtrahg7qbf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
