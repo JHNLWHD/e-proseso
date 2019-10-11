@@ -1,17 +1,20 @@
 import 'dart:async';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_database/firebase_database.dart';
 
 import 'package:flutter/material.dart';
 
 import 'process.dart';
 import 'process_screen.dart';
+import 'sign_in.dart';
 
 class FirstScreen extends StatefulWidget {
+
   @override
   _FirstScreenNoteState createState() => new _FirstScreenNoteState();
 }
 
-final notesReference = FirebaseDatabase.instance.reference().child('ZqyzShRtt4aNp0QN1in5JoBtNYX2');
+final notesReference = FirebaseDatabase.instance.reference().child(uuid);
 
 class _FirstScreenNoteState extends State<FirstScreen> {
   List<Process> items;
@@ -21,12 +24,11 @@ class _FirstScreenNoteState extends State<FirstScreen> {
   @override
   void initState() {
     super.initState();
-
     items = new List();
-
     _onNoteAddedSubscription = notesReference.onChildAdded.listen(_onNoteAdded);
     _onNoteChangedSubscription = notesReference.onChildChanged.listen(_onNoteUpdated);
   }
+
 
   @override
   void dispose() {
@@ -48,7 +50,7 @@ class _FirstScreenNoteState extends State<FirstScreen> {
         body: Center(
           child: ListView.builder(
               itemCount: items.length,
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.all(20.0),
               itemBuilder: (context, position) {
                 return Column(
                   children: <Widget>[
@@ -82,9 +84,6 @@ class _FirstScreenNoteState extends State<FirstScreen> {
                               ),
                             ),
                           ),
-                          IconButton(
-                              icon: const Icon(Icons.remove_circle_outline),
-                              onPressed: () => _deleteNote(context, items[position], position)),
                         ],
                       ),
                       onTap: () => _navigateToNote(context, items[position]),
@@ -110,14 +109,6 @@ class _FirstScreenNoteState extends State<FirstScreen> {
     });
   }
 
-  void _deleteNote(BuildContext context, Process process, int position) async {
-    await notesReference.child(process.referenceNumber).remove().then((_) {
-      setState(() {
-        items.removeAt(position);
-      });
-    });
-  }
-
   void _navigateToNote(BuildContext context, Process note) async {
     await Navigator.push(
       context,
@@ -125,10 +116,4 @@ class _FirstScreenNoteState extends State<FirstScreen> {
     );
   }
 
-//  void _createNewNote(BuildContext context) async {
-//    await Navigator.push(
-//      context,
-//      MaterialPageRoute(builder: (context) => ProcessScreen(Process(null, '', ''))),
-//    );
-//  }
 }
