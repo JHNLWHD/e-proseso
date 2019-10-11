@@ -64,11 +64,18 @@ class _FirstScreenNoteState extends State<FirstScreen> {
                         ),
                       ),
                       subtitle: Text(
-                        '${items[position].transactionType}',
+                        '${items[position].transactionType} \n ${items[position].transactionDate}',
                         style: new TextStyle(
                           fontSize: 18.0,
                           fontStyle: FontStyle.italic,
                         ),
+                      ),
+                      trailing: Text(
+                          '${items[position].amount}',
+                          style: new TextStyle(
+                            fontSize: 18.0,
+                            fontStyle: FontStyle.italic,
+                          ),
                       ),
                       leading: Column(
                         children: <Widget>[
