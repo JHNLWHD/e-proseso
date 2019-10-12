@@ -32,63 +32,63 @@ class _ProcessScreenState extends State<ProcessScreen> {
               'Reference Number: ' + widget.process.referenceNumber,
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.grey,
+                color: Colors.black,
               ),
             ),
             Text(
               'Office: ' + widget.process.nameOfOffice,
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.grey,
+                color: Colors.black,
               ),
             ),
             Text(
               'Office Address: ' + widget.process.officeAddress,
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.grey,
+                color: Colors.black,
               ),
             ),
             Text(
               'Client: ' + widget.process.clientName,
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.grey,
+                color: Colors.black,
               ),
             ),
             Text(
               'Client Address: ' + widget.process.clientAddress,
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.grey,
+                color: Colors.black,
               ),
             ),
             Text(
               'Transaction: ' + widget.process.transactionType,
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.grey,
+                color: Colors.black,
               ),
             ),
             Text(
               'Date: ' + widget.process.transactionDate,
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.grey,
+                color: Colors.black,
               ),
             ),
             Text(
               'Amount: ' + widget.process.amount,
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.grey,
+                color: Colors.black,
               ),
             ),
             Text(
               'Validity: ' + widget.process.validity,
               style: TextStyle(
                 fontSize: 20,
-                color: Colors.grey,
+                color: Colors.black,
               ),
             ),
             Padding(padding: new EdgeInsets.all(5.0)),
