@@ -84,6 +84,13 @@ class _ProcessScreenState extends State<ProcessScreen> {
                 color: Colors.grey,
               ),
             ),
+            Text(
+              'Validity: ' + widget.process.validity,
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.grey,
+              ),
+            ),
             Padding(padding: new EdgeInsets.all(5.0)),
           ],
         ),
